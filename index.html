@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="ASTRA 2 — personal AI command centre and cybersecurity learning dashboard.">
+  <title>ASTRA 2 — Command Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="ASTRA 2 home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span><b>ASTRA</b><small>COMMAND SYSTEM <i>2.0</i></small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-link active" data-view="overview"><span class="nav-icon">◈</span> Overview</button>
+        <button class="nav-link" data-view="assistant"><span class="nav-icon">✳</span> AI Assistant <em class="nav-tag">BETA</em></button>
+        <button class="nav-link" data-view="security"><span class="nav-icon">⬡</span> Cyber Lab</button>
+        <button class="nav-link" data-view="devices"><span class="nav-icon">▣</span> Devices</button>
+        <button class="nav-link" data-view="terminal"><span class="nav-icon">⌘</span> Terminal</button>
+        <button class="nav-link" data-view="study"><span class="nav-icon">▤</span> Study Centre</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="system-card">
+          <div class="status-line"><span class="pulse"></span> ALL SYSTEMS NORMAL</div>
+          <p>ASTRA local interface is running.</p>
+          <div class="system-meter"><span></span></div>
+          <small>FRONTEND STATUS <b>ONLINE</b></small>
+        </div>
+        <div class="profile"><div class="avatar">A</div><div><b>Operator</b><small>Personal workspace</small></div><span class="profile-dot"></span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb">ASTRA 2 <span>/</span> <b id="crumb">Overview</b></div>
+        <div class="top-actions"><div class="live-indicator"><span></span> SYSTEM LIVE</div><div class="clock" id="clock">--:--:--</div></div>
+      </header>
+
+      <section class="view active" id="view-overview">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL INTELLIGENCE PLATFORM</div><h1>Good day, <span>Operator.</span></h1><p class="subhead">Your command centre is ready. What would you like to work on?</p></div>
+          <div class="date-chip"><span>◷</span><div><small>LOCAL DATE</small><b id="date">---</b></div></div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-content"><div class="hero-kicker"><span class="pulse"></span> ASTRA CORE // STANDBY</div><h2>Intelligence.<br><span>At your command.</span></h2><p>A unified workspace for learning, productivity and responsible security exploration.</p><button class="primary-btn" data-goto="assistant">Launch assistant <span>↗</span></button></div>
+          <div class="orb-wrap"><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div><div class="orb-ring ring-three"></div><div class="orb"><div class="orb-core"></div></div><div class="orb-caption">ASTRA CORE <span>● ACTIVE</span></div></div>
+          <div class="hero-grid"></div>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow">AT A GLANCE</div><h3>Workspace overview</h3></div><span class="muted mono">LIVE SESSION</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>AI ASSISTANT</span><span class="stat-icon cyan">✳</span></div><strong>READY</strong><small>Interface available</small><div class="stat-foot"><span class="tiny-dot"></span> Awaiting your prompt</div></article>
+          <article class="stat-card"><div class="stat-top"><span>SECURITY LAB</span><span class="stat-icon violet">⬡</span></div><strong>SAFE MODE</strong><small>Simulation environment</small><div class="stat-foot"><span class="tiny-dot violet-dot"></span> No external scanning</div></article>
+          <article class="stat-card"><div class="stat-top"><span>DEVICES</span><span class="stat-icon blue">▣</span></div><strong id="deviceCount">03</strong><small>Sample device cards</small><div class="stat-foot"><span class="tiny-dot"></span> Demo data only</div></article>
+          <article class="stat-card"><div class="stat-top"><span>STUDY TASKS</span><span class="stat-icon amber">▤</span></div><strong id="taskCount">00</strong><small>Tasks completed today</small><div class="stat-foot"><span class="tiny-dot amber-dot"></span> Build your momentum</div></article>
+        </div>
+        <div class="lower-grid">
+          <article class="panel quick-panel"><div class="panel-heading"><div><span class="eyebrow">QUICK ACCESS</span><h3>Launch a module</h3></div><span class="panel-more">↗</span></div><div class="quick-grid">
+            <button class="quick-item" data-goto="assistant"><span class="quick-icon cyan">✳</span><b>AI Assistant</b><small>Ask, plan, explore</small><span class="quick-arrow">↗</span></button>
+            <button class="quick-item" data-goto="security"><span class="quick-icon violet">⬡</span><b>Cyber Lab</b><small>Learn security basics</small><span class="quick-arrow">↗</span></button>
+            <button class="quick-item" data-goto="devices"><span class="quick-icon blue">▣</span><b>Devices</b><small>View demo devices</small><span class="quick-arrow">↗</span></button>
+            <button class="quick-item" data-goto="study"><span class="quick-icon amber">▤</span><b>Study Centre</b><small>Track your focus</small><span class="quick-arrow">↗</span></button>
+          </div></article>
+          <article class="panel activity-panel"><div class="panel-heading"><div><span class="eyebrow">SESSION LOG</span><h3>Recent activity</h3></div><button class="text-btn" id="clearActivity">Clear</button></div><div class="activity-list" id="activityList"><div class="activity"><span class="activity-mark">✓</span><div><b>ASTRA interface initialized</b><small>Just now · System</small></div></div><div class="activity"><span class="activity-mark">◈</span><div><b>Safe mode enabled</b><small>Session policy · Security</small></div></div><div class="activity"><span class="activity-mark">⌘</span><div><b>Command console ready</b><small>Local interface · Terminal</small></div></div></div></article>
+        </div>
+        <footer>ASTRA 2 <span>•</span> BUILT FOR LEARNING, CREATIVITY & RESPONSIBLE EXPLORATION</footer>
+      </section>
+
+      <section class="view" id="view-assistant">
+        <div class="page-heading"><div class="eyebrow">ASTRA INTELLIGENCE</div><h1>AI <span>Assistant</span></h1><p class="subhead">A focused space to think, plan and learn.</p></div>
+        <div class="assistant-layout">
+          <div class="panel chat-panel"><div class="chat-head"><div class="assistant-avatar">✳</div><div><b>ASTRA CORE</b><small><span class="tiny-dot"></span> Interface ready · No AI API connected</small></div><button class="text-btn" id="clearChat">Clear chat</button></div>
+            <div class="chat-messages" id="chatMessages"><div class="message assistant-message"><span class="message-avatar">A</span><div><small>ASTRA · SYSTEM</small><p>Welcome to ASTRA 2. I'm your command-centre interface. This starter version can help you navigate its modules and demonstrate local interactions. Connect a trusted AI service through a secure backend to enable live AI responses.</p></div></div></div>
+            <form class="chat-compose" id="chatForm"><input id="chatInput" type="text" placeholder="Message ASTRA..." autocomplete="off" maxlength="500"><button class="send-btn" type="submit" aria-label="Send message">↑</button></form><div class="compose-note">DEMO INTERFACE · DO NOT ENTER PASSWORDS OR PRIVATE INFORMATION</div>
+          </div>
+          <aside class="panel assistant-side"><span class="eyebrow">SUGGESTED PROMPTS</span><h3>Start with an idea</h3><button class="prompt-chip">Help me plan my day</button><button class="prompt-chip">Explain a difficult concept</button><button class="prompt-chip">Create a study checklist</button><button class="prompt-chip">Teach me cybersecurity basics</button><div class="notice"><b>Connection status</b><p>Live AI is not connected yet. Your messages stay in this browser demo and are not sent to an AI provider.</p></div></aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-security">
+        <div class="page-heading"><div class="eyebrow">LEARN RESPONSIBLY</div><h1>Cyber <span>Lab</span></h1><p class="subhead">Explore security concepts using safe, local demonstrations.</p></div>
+        <div class="safe-banner"><span>⬡</span><div><b>SAFE SIMULATION MODE</b><p>These demonstrations do not scan networks, contact external devices or test real systems.</p></div><span class="safe-pill">ENABLED</span></div>
+        <div class="security-grid">
+          <article class="panel lab-card"><div class="lab-icon violet">⌁</div><span class="eyebrow">MODULE 01</span><h3>Password strength guide</h3><p>Learn what makes a passphrase more resistant to guessing. Nothing you type here is saved.</p><label for="passDemo">Try a sample phrase</label><input id="passDemo" type="text" placeholder="Type a practice phrase" autocomplete="off"><div class="strength-track"><span id="strengthBar"></span></div><div class="strength-caption"><span id="strengthText">Waiting for input</span><span id="strengthBits">—</span></div><small class="muted">Use a fictional phrase, never your real password.</small></article>
+          <article class="panel lab-card"><div class="lab-icon cyan">⌖</div><span class="eyebrow">MODULE 02</span><h3>Security checklist</h3><p>Review basic steps that help protect your own accounts and devices.</p><div class="check-list"><label><input type="checkbox"> Enable multi-factor authentication</label><label><input type="checkbox"> Install operating system updates</label><label><input type="checkbox"> Use unique passphrases</label><label><input type="checkbox"> Review app permissions</label><label><input type="checkbox"> Keep a secure backup</label></div></article>
+          <article class="panel lab-card wide-lab"><div class="lab-icon blue">⌘</div><span class="eyebrow">MODULE 03</span><h3>Network concepts simulator</h3><p>See a fictional example of how devices might appear in a home network inventory. This is sample data only.</p><button class="primary-btn" id="runSim">Run sample simulation <span>↗</span></button><div class="sim-output" id="simOutput"><span class="muted">Simulation output will appear here.</span></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-devices">
+        <div class="page-heading"><div class="eyebrow">YOUR WORKSPACE</div><h1>Device <span>Overview</span></h1><p class="subhead">A visual demo of a device dashboard. No devices are actually connected.</p></div>
+        <div class="safe-banner"><span>▣</span><div><b>DEMO DEVICE INVENTORY</b><p>Example devices are shown for interface preview only. Real monitoring requires an explicitly installed, permission-based companion.</p></div><span class="safe-pill">LOCAL DEMO</span></div>
+        <div class="device-grid">
+          <article class="panel device-card"><div class="device-top"><span class="device-emoji">▱</span><span class="device-status">DEMO</span></div><h3>Personal iPad</h3><p>Tablet · Sample entry</p><div class="device-meta"><span>Connection</span><b>Not connected</b></div><div class="device-meta"><span>Permission</span><b>Not granted</b></div></article>
+          <article class="panel device-card"><div class="device-top"><span class="device-emoji">▣</span><span class="device-status">DEMO</span></div><h3>Android phone</h3><p>Mobile · Sample entry</p><div class="device-meta"><span>Connection</span><b>Not connected</b></div><div class="device-meta"><span>Permission</span><b>Not granted</b></div></article>
+          <article class="panel device-card"><div class="device-top"><span class="device-emoji">▤</span><span class="device-status">DEMO</span></div><h3>Windows PC</h3><p>Computer · Sample entry</p><div class="device-meta"><span>Connection</span><b>Not connected</b></div><div class="device-meta"><span>Permission</span><b>Not granted</b></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-terminal">
+        <div class="page-heading"><div class="eyebrow">LOCAL COMMAND INTERFACE</div><h1>ASTRA <span>Terminal</span></h1><p class="subhead">Try the built-in educational commands.</p></div>
+        <div class="panel terminal-panel"><div class="terminal-top"><div><i></i><i></i><i></i></div><span>ASTRA-SHELL · LOCAL DEMO</span><button class="text-btn" id="clearTerminal">Clear</button></div><div class="terminal-output" id="terminalOutput"><p class="term-muted">ASTRA 2 educational console [Version 2.0.0]</p><p class="term-muted">Type <b>help</b> to view available commands. This is not an operating-system shell.</p><p class="term-success">Safe mode active. No external commands are executed.</p></div><form class="terminal-input-row" id="terminalForm"><span>astra@local:~$</span><input id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type help..."></form></div>
+        <div class="command-hints"><span>AVAILABLE COMMANDS</span><code>help</code><code>status</code><code>time</code><code>modules</code><code>clear</code></div>
+      </section>
+
+      <section class="view" id="view-study">
+        <div class="page-heading"><div class="eyebrow">FOCUS & CONSISTENCY</div><h1>Study <span>Centre</span></h1><p class="subhead">Turn your goals into small, trackable actions.</p></div>
+        <div class="study-layout"><div class="panel task-panel"><div class="panel-heading"><div><span class="eyebrow">YOUR CHECKLIST</span><h3>Today's tasks</h3></div><span class="task-progress" id="taskProgress">0 / 0 DONE</span></div><form class="add-task" id="taskForm"><input id="taskInput" placeholder="Add a study task..." maxlength="100"><button class="primary-btn" type="submit">Add task +</button></form><div id="taskList" class="task-list"><div class="empty-state">No tasks yet. Add one small goal to get started.</div></div></div>
+          <aside class="panel focus-panel"><span class="eyebrow">FOCUS TIMER</span><h3>Deep work session</h3><div class="timer-ring"><div><strong id="timerDisplay">25:00</strong><small>MINUTES</small></div></div><div class="timer-controls"><button class="primary-btn" id="timerStart">Start focus</button><button class="secondary-btn" id="timerReset">Reset</button></div><p class="muted">A simple 25-minute focus session. Take a short break when it ends.</p></aside></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
