@@ -2,13 +2,12 @@
   "name": "astra-2-backend",
   "version": "1.0.0",
   "private": true,
-  "description": "Secure starter API for ASTRA 2",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": "20.x"
   },
   "dependencies": {
     "cors": "^2.8.5",
