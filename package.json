@@ -5,8 +5,7 @@
   "description": "Secure starter API for ASTRA 2",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=20"
